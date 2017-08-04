@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="88px"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_property"
+            android:layout_width="120px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:gravity="center"
+            android:text="@string/property"
+            android:textColor="@color/colorBlack"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:id="@+id/textView_advice_project"
+            android:layout_width="156px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:gravity="center"
+            android:text="@string/advice_project"
+            android:textColor="@color/colorBlack"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:id="@+id/textView_standard"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:gravity="center"
+            android:text="@string/standard"
+            android:textColor="@color/colorBlack"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:id="@+id/textView_unit"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:gravity="center"
+            android:text="@string/unit"
+            android:textColor="@color/colorBlack"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:id="@+id/textView_dosage"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:gravity="center"
+            android:text="@string/dosage"
+            android:textColor="@color/colorBlack"
+            android:textSize="28px"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

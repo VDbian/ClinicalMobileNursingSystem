@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/sv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/layout_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <qrcode.view.CaptureView
+            android:id="@+id/cv_capture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btn_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="40px"
+            android:layout_marginRight="32px"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/capture_album"
+            android:textColor="@android:color/white"
+            android:textSize="34px" />
+        <TextView
+            android:id="@+id/textView_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="将图案放入框内，自动扫描"
+            android:layout_above="@+id/btn_album"
+            android:gravity="center"
+            android:layout_marginBottom="148px"
+            android:textSize="32px"
+            android:textColor="#00ffff"
+            android:background="@android:color/transparent"
+            />
+
+        <Button
+            android:id="@+id/cb_capture_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="32px"
+            android:text="闪光灯"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="8px"
+            android:textSize="34px"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_marginTop="56px"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_qrcode_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/clinical_mobile_nursing_terminal"
+            android:textColor="@android:color/white"
+            android:textSize="32px" />
+    </RelativeLayout>
+</RelativeLayout>

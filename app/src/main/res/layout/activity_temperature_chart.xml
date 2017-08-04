@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="148px"
+        android:background="@drawable/shape_background_title"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24px"
+            android:layout_marginLeft="32px"
+            >
+
+            <ImageView
+                android:id="@+id/imageView_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/repeat"
+                android:tint="@color/colorWhite"
+                />
+
+            <TextView
+                android:id="@+id/textView_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8px"
+                android:layout_toRightOf="@+id/imageView_back"
+                android:text="@string/back"
+                android:textColor="@color/colorWhite"
+                android:textSize="32px"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16px"
+            android:text="@string/temperature_chart"
+            android:textColor="@color/colorWhite"
+            android:textSize="37px"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_temperature_chart_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout_title"
+        android:layout_marginBottom="72px"
+        android:layout_marginTop="20px"
+        >
+        <LinearLayout
+            android:id="@+id/point_container"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_temperature_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/point_container"
+            >
+        </android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+
+    <include layout="@layout/bottom_item"></include>
+
+</RelativeLayout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="148px"
+        android:background="@drawable/shape_background_title">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24px"
+            android:layout_marginLeft="32px">
+
+            <ImageView
+                android:id="@+id/imageView_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/repeat"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/textView_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8px"
+                android:layout_toRightOf="@+id/imageView_back"
+                android:text="@string/back"
+                android:textColor="@color/colorWhite"
+                android:textSize="32px" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16px"
+            android:text="@string/medical_orders_treating"
+            android:textColor="@color/colorWhite"
+            android:textSize="37px" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_scan"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="32px"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageView_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/qr_code"
+                android:tint="@color/colorWhite" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_below="@+id/relativeLayout_title"
+        android:orientation="vertical">
+        <!--<RadioGroup-->
+        <!--android:id="@+id/radioGroup_medical_order_treating"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="92px"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--&gt;-->
+        <!--<RadioButton-->
+        <!--android:id="@+id/radioButton_pending"-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/pending"-->
+        <!--android:textColor="@drawable/selector_radiogroup_text"-->
+        <!--android:button="@null"-->
+        <!--android:textSize="30px"-->
+        <!--android:gravity="center"-->
+        <!--android:checked="true"-->
+        <!--/>-->
+        <!--<RadioButton-->
+        <!--android:id="@+id/radioButton_already_transfer_copy"-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/already_transfer_copy"-->
+        <!--android:textColor="@drawable/selector_radiogroup_text"-->
+        <!--android:button="@null"-->
+        <!--android:textSize="30px"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+        <!--<RadioButton-->
+        <!--android:id="@+id/radioButton_already_proofread"-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/already_proofread"-->
+        <!--android:textColor="@drawable/selector_radiogroup_text"-->
+        <!--android:button="@null"-->
+        <!--android:textSize="30px"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+        <!--<RadioButton-->
+        <!--android:id="@+id/radioButton_already_dispensing"-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/already_dispensing"-->
+        <!--android:textColor="@drawable/selector_radiogroup_text"-->
+        <!--android:button="@null"-->
+        <!--android:textSize="30px"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+        <!--<RadioButton-->
+        <!--android:id="@+id/radioButton_already_executive"-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/already_executive"-->
+        <!--android:textColor="@drawable/selector_radiogroup_text"-->
+        <!--android:button="@null"-->
+        <!--android:textSize="30px"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+
+        <!--</RadioGroup>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="92px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_pending"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="27px"
+                android:gravity="center"
+                android:text="@string/pending"
+                android:textColor="@color/colorRadioGroupNormal"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/textView_already_transfer_copy"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="54px"
+                android:gravity="center"
+                android:text="@string/already_transfer_copy"
+                android:textColor="@color/colorRadioGroupNormal"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/textView_already_proofread"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="54px"
+                android:gravity="center"
+                android:text="@string/already_proofread"
+                android:textColor="@color/colorRadioGroupNormal"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/textView_already_dispensing"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="54px"
+                android:gravity="center"
+                android:text="@string/already_dispensing"
+                android:textColor="@color/colorRadioGroupNormal"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/textView_already_executive"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="54px"
+                android:gravity="center"
+                android:text="@string/already_executive"
+                android:textColor="@color/colorRadioGroupNormal"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_underline"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@color/colorRadioGroupChecked"></View>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line_one"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/linearLayout_radioGroup"
+        android:background="#DADADA" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_search"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_below="@+id/line_one">
+
+        <EditText
+            android:id="@+id/editText_search"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginLeft="16px"
+            android:layout_marginRight="16px"
+            android:layout_marginTop="16px"
+            android:background="@drawable/shape_edittext_background"
+            android:gravity="center"
+            android:hint="@string/input_bed_num"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColorHint="@color/colorEditTextHint"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor"
+            android:textSize="26px" />
+
+        <ImageView
+            android:id="@+id/imageView_search"
+            android:layout_width="48px"
+            android:layout_height="48px"
+            android:layout_marginLeft="256px"
+            android:layout_marginTop="30px"
+            android:scaleType="center"
+            android:src="@mipmap/searchbar_icon"
+            android:tint="@color/colorEditTextHint" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line_two"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/relativeLayout_search"
+        android:layout_marginTop="16px"
+        android:background="#D6D6DB" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_two"
+        android:layout_marginTop="20px"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_patient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="32px"
+            android:text="@string/patient_name"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_name_show"
+            android:layout_width="136px"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="32px"
+            android:text="一二三四五"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="16px"
+            android:layout_marginTop="32px"
+            android:text="@string/patient_sex"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_sex_show"
+            android:layout_width="64px"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="32px"
+            android:text="男"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="16px"
+            android:layout_marginTop="32px"
+            android:text="@string/patient_age"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_age_show"
+            android:layout_width="64px"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="32px"
+            android:text="35"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_bed_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="16px"
+            android:layout_marginTop="32px"
+            android:text="@string/patient_bed_num"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/textView_patient_bed_num_show"
+            android:layout_width="88px"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="32px"
+            android:text="A01"
+            android:textColor="@color/colorMainText"
+            android:textSize="28px" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_medical_order_treating"
+        android:layout_width="match_parent"
+        android:layout_height="528px"
+        android:layout_below="@+id/linearLayout_information"
+        android:layout_marginTop="20px"
+        android:divider="@drawable/shape_listview_divider"></ListView>
+
+    <Button
+        android:id="@+id/button_affirm"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_below="@+id/listView_medical_order_treating"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="32px"
+        android:background="@drawable/shape_button_medical_order_trearing"
+        android:gravity="center"
+        android:text="@string/medical_orders_copy"
+        android:textColor="@color/colorWhite"
+        android:textSize="36px" />
+
+    <include
+        android:id="@+id/bottom"
+        layout="@layout/bottom_item"></include>
+</RelativeLayout>
